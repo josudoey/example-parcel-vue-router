@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel serve assets/index.pug --open -p 3000",
+    "build": "parcel build assets/index.pug --no-autoinstall --no-source-maps -d ./dist"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,15 @@
   "homepage": "https://github.com/josudoey/example-parcel-vue-router#readme",
   "devDependencies": {
     "parcel-bundler": "^1.10.3",
+    "parcel-plugin-pug": "^0.3.1",
+    "parcel-plugin-pug-client": "^1.0.1",
     "vue": "^2.5.17"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "nprogress": "^0.2.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
     "vue-router": "^3.0.1"
   }
 }
